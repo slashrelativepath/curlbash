@@ -139,6 +139,23 @@ Possible Scenarios:
 3. run a service
 
 # Lesson 2
+ * editing files
+ * node web page OR file copy via scp
+ * ssh keys
+ * create a user
+ * enable outside access
+ * markdown file
+ * create a repo and push up to github (github cli)
+ 
+ # lesson 3
+ * create a VM
+ * create an API
+ * requests (curl)
+
+ # lesson 4
+ * auto build and configure
+ * have the code to do that
+
 
 1. make a webpage
 2. configure a web server
@@ -174,3 +191,38 @@ clear
 apt update
 # what we did
 history
+```
+
+CONT...
+
+```
+# update and upgrade 
+sudo apt update
+sudo apt upgrade
+ssh
+
+which ssh
+
+sudo -i 
+
+ip a
+
+ssh stephen@192.168.86.47
+
+sudo apt install openssh-server
+
+sudo systemctl status sshd
+
+# check fingerprint
+
+
+Lesson 5: Networking
+  * port forwarding
+  * ports
+  * security
+  * NAT
+  * file sharing
+    * scp
+    * ssh
+    * samba
+  * ssh keys
