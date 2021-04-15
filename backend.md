@@ -226,3 +226,110 @@ Lesson 5: Networking
     * ssh
     * samba
   * ssh keys
+
+
+Lesson How Computers Work
+
+* parts of the computer
+* how boot works
+
+
+Lesson The Shell
+* what is the shell?
+* applications vs programs
+  what is the difference between
+    application and program
+    command and application
+    command is the whole line for a shell which includes
+    applitcaion flags and inputs or args
+* order of tokens / command
+* execution in shell
+  * output
+* cat foo
+* create and edit file
+* redirection
+  > 
+* rm file
+
+Lesson SSH Keys
+* authorized hosts
+
+Lesson Bash Script
+
+Lesson Write a Program
+
+Lesson Virtual Machines
+
+Lesson format
+  student always drives
+  keep a list of commands or vocab
+
+
+1. shell is talking to the computer
+2. single commands make the computer do stuff
+3. make a file with mutliple commands
+
+Lesson ssh/file/copy
+
+* ssh to your server
+* cd your home directory
+  * cd ~
+  * mkdir foo
+  * ls 
+  * cd foo
+  * nano
+  * foo.html
+  * ls
+  * cat foo.html
+  * exit
+  * download a png on laptop
+  * scp cat.png user@serverip
+  * add img tag to html
+  * need to run a web server
+  * install a package, write a config, start the service
+  * what is a package - installable package for an application
+  * manage with package manager
+  * sudo apt update
+  * sudo apt install nginx
+  * systemctl status nginx
+  * man curl
+  * sudo apt install curl
+  * edit nginx.conf
+  * restar the service
+  * copy the html and img to nginx web dir
+  *  cp ~/index.html .
+  * rm index.html
+  * mv cat.html index.html
+  * tail /var/log/nginx/access.log
+
+
+  Lesson 86 Game Programming
+  * intro to SDL
+  * C/C++
+  
+  Lesson Bash Scripting
+
+  *
+  history
+  .bash_history
+  .profile
+  .bashrc
+  .ssh
+
+  pipeline
+  unix philospholy
+
+  redirection
+    stdout
+
+
+    3/16/21
+
+    review
+      * provisioning
+        * provide safe access resources
+        * enforce risk mitigation
+        * going from no computer to backend service running
+        * topology
+        * scale vertical/horizontal
+         
