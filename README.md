@@ -38,13 +38,6 @@ wifis:
       password: "123456789"
 ```
 
-Edit the file `system-boot/user-data` and add this at the end of the file.
-
-```
-power_state:
-  mode: reboot
-```
-
 4. Remove sdcard from adapter and put back into Raspberry Pi or put usb into server.
 
 5. Turn on server.
@@ -70,3 +63,4 @@ power_state:
 ### Notes
 
 - [https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#4-boot-ubuntu-server]
+- [https://ubuntu.com/server/docs/install/autoinstall-quickstart]
