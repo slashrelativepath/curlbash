@@ -1,70 +1,63 @@
-# Provision a computer
+## Download and install Raspberry Pi Imager
 
-## Image and boot
+[https://www.raspberrypi.org/software/]
 
-1. get the operating system image
-  * download the image for ubuntu server 20.10
-2. create a usb drive
-  * write the image to the usb or sd
-3. boot the usb
-4. install the system
-5. boot the system
+## Download the Raspberry Pi OS 64bit Lite Image
 
-* install balena etcher (mac, pc)
-* install rpi-image (linux)
+[https://downloads.raspberrypi.org/raspios_lite_arm64/images/raspios_lite_arm64-2021-04-09/2021-03-04-raspios-buster-arm64-lite.zip]
+
+## SDCard
+
+1. Eject or pull the SDCard out of the Pi and put it into the USB SDCard adapter.
+2. Put the USB adapter into your workstation.
+
+## Raspberry Pi Imager Settings
+
+1. Run the Raspberry Pi Imager and access the advanced options menu by typing `control+shift+X`.
+
+* Values in all caps like YOURNAME are where you put in your setting.
 
 ```
-login ubuntu/ubuntu
+☑ Set hostname: YOURNAME-pi.local
 
-### navigation shell
-1. man app
-2. paths
-### files / directories
-### creating and editing files
+☑ Enable SSH
+  Use password authentication
+    set password for 'pi' user: raspberry
 
-### Networking
-1. setup wifi
-2. ip address
-3. LAN / WAN
-4. mac address
-5. NAT addressing
+☑ Configre wifi
+  SSID: YOURWIFINAME
+  Password: YOURWIFIPASSWORD
+  Wifi country: US
 
-## Update System
+☑ Set locale settings
+  Times zone: YOURTIMEZONE
+  Keyboard layout: US
+  ☑ Skip first-run wizard
 
-1. update all system packages
-2. install a new package `ssh-server`
-3. run a service
-4. update and upgrade
-5. patching system
+Persistent settings
+  ☑ Play sounds when finished
+  ☑ Eject media when finished
+  ☑ Enable Telemetry
+```
+2. Save the Advanced options.
+3. Operating System `CHOOSE OS -> Use custom` and pick the `2021-03-04-raspios-buster-arm64-lite.zip` you downloaded.
+4. Storage `CHOOSE STORAGE` pick the SDCard you inserted in your usb. Be careful here not to pick your workstation drive.
+5. Write
 
-## Create User
-1. create new user
+## SDCard
 
-## Remote Login
+1. Remove the USB SDCard adapter from your workstation.
+2. Take the SDCard out of the adapter and put it back into the Pi.
 
-1. username
-2. ip address
-3. ssh
+## Boot
+1. Turn on the Pi.
 
-## System Process
+## Find the IP Address of the Pi
 
-1. man ps
-2. daemon
-3. ps aux | grep ssh
-4. start, stop, enable
+1. On your workstation open a terminal or powershell.
+2. To get the IP address on Windows type: `Resolve-DnsName USERNAME-pi.local` to get the Pi server IP address.
+3. To get the IP address (non-windows) type: `ping USERNAME-pi.local` to get the Pi server IP address.
 
-## Start and Reboot
-1. `sudo reboot now`
+## SSH to the Pi
 
-# Application Versions
-
-1. Semantic Version
-
-# System Adminstrator Tasks
-
-1. Keep your systems up to date
-
-
-RJ summary
-
-Overview of the external  and  internal parts of the computer  What happens when you turn on a computer  What is the difference between an operating system and applications  What is the difference between applications and programs  What is the difference between running an application locally and running a client server application service  Sizes of storage, RAM, speeds, and resolution  Basic intro to base 2 counting also known as binary counting  How to read computer specs
+1. In your terminal/powershell type `ssh pi@IPADDRESS` to log into the Pi server with the username `pi` and the password `raspberry`.
