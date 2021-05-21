@@ -3,6 +3,12 @@ Curriculum for teaching computers.
 
 ## Provisioning
 
+### Buy a Raspberry Pi 400 and USB SCCard Adapter
+
+[https://www.canakit.com/raspberry-pi-400-desktop-computer-kit.html]
+
+[https://www.canakit.com/mini-micro-sd-usb-reader.html]
+
 ### Download and install Raspberry Pi Imager
 
 [https://www.raspberrypi.org/software/]
@@ -13,8 +19,9 @@ Curriculum for teaching computers.
 
 ### SDCard
 
+1. Make sure the Pi is off and or unplugged.
 1. Eject or pull the SDCard out of the Pi and put it into the USB SDCard adapter.
-2. Put the USB adapter into your workstation.
+2. Put the USB adapter into your workstations USB port.
 
 ### Raspberry Pi Imager Settings
 
