@@ -1,66 +1,75 @@
-# Full Snack Developer
-Curriculum for teaching full stack development.
+# Curl Bash Computer Class
+Curriculum for teaching computers.
 
+## Provisioning
 
-## Getting Started
+### Buy a Raspberry Pi 400 and USB SDCard Adapter
 
-### Provisioning
+[https://www.canakit.com/raspberry-pi-400-desktop-computer-kit.html]
 
-1. Download the operating system image. For FullSnax we are using Ubuntu 20.10.
+[https://www.canakit.com/mini-micro-sd-usb-reader.html]
 
-[https://ubuntu.com/download/raspberry-pi]
+### Download and install Raspberry Pi Imager
 
+[https://www.raspberrypi.org/software/]
 
-2. Download and install image copying software.
+### Download the Raspberry Pi OS 64bit Lite Image
 
-Raspbery Pi Imager [https://www.raspberrypi.org/software/].
+[https://downloads.raspberrypi.org/raspios_lite_arm64/images/raspios_lite_arm64-2021-04-09/2021-03-04-raspios-buster-arm64-lite.zip]
 
-3. Remove SDCard from Raspberry Pi and put into usb adapter and put the adapter into your workstation computer (not the server). If you are not using a Pi put your usb drive in your workstation computer (not the server).
+### SDCard
 
-3. Write operating system to sdcard or usb.
+1. Make sure the Pi is off and or unplugged.
+1. Eject or pull the SDCard out of the Pi and put it into the USB SDCard adapter.
+2. Put the USB adapter into your workstations USB port.
 
-* Raspbery Pi Imager
-  1. Choose your operating system - Ubuntu Server 20.10.
-  2. Choose your sdcard.
-  3. Write image.
+### Raspberry Pi Imager Settings
 
-3. Write wifi config
+1. Run the Raspberry Pi Imager and access the advanced options menu by typing `control+shift+X`.
 
-Remove the sdcard from your computer and re-insert it again to edit the file `system-boot/network-config`. Change "home network" to your wifi name and add your wifi password. 
+* Values in all caps like YOURNAME are where you put in your setting.
 
 ```
-wifis:
-  wlan0:
-  dhcp4: true
-  optional: true
-  access-points:
-    yournetworkname:
-      password: "123456789"
+☑ Set hostname: YOURNAME-pi.local
+
+☑ Enable SSH
+  Use password authentication
+    set password for 'pi' user: raspberry
+
+☑ Configre wifi
+  SSID: YOURWIFINAME
+  Password: YOURWIFIPASSWORD
+  Wifi country: US
+
+☑ Set locale settings
+  Times zone: YOURTIMEZONE
+  Keyboard layout: US
+  ☑ Skip first-run wizard
+
+Persistent settings
+  ☑ Play sounds when finished
+  ☑ Eject media when finished
+  ☑ Enable Telemetry
 ```
+2. Save the Advanced options.
+3. Operating System `CHOOSE OS -> Use custom` and pick the `2021-03-04-raspios-buster-arm64-lite.zip` you downloaded.
+4. Storage `CHOOSE STORAGE` pick the SDCard you inserted in your usb. Be careful here not to pick your workstation drive.
+5. Write
 
-4. Remove sdcard from adapter and put back into Raspberry Pi or put usb into server.
+### SDCard
 
-5. Turn on server.
+1. Remove the USB SDCard adapter from your workstation.
+2. Take the SDCard out of the adapter and put it back into the Pi.
 
-6. Open a terminal on your computer.
+### Boot
+1. Turn on the Pi.
 
-10. Get IP of server from your computer.
+### Find the IP Address of the Pi
 
-`nmap -sn 192.168.86.0/24` and search for your server named something 'ubuntu'
+1. On your workstation open a terminal or powershell.
+2. To get the IP address on Windows type: `Resolve-DnsName USERNAME-pi.local` to get the Pi server IP address.
+3. To get the IP address (non-windows) type: `ping USERNAME-pi.local` to get the Pi server IP address.
 
-7. Log in to server from your worksation.
-  0. `ssh ubuntu@IPADDRESS` where IPADDRESS is the ip from the previous step
-  1. Enter username 'ubuntu' and your password.
-  2. If this is the first time logging into the Pi, you will be asked to change your password.
-  3. Enter your CURRENT password and then enter in your new password twice.
-  4. You will be logged out and will need to ssh in again using new password.
+### SSH to the Pi
 
-8. Update server to latest software.
-  `sudo apt update`
-  `sudo apt upgrade`
-
-
-### Notes
-
-- [https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#4-boot-ubuntu-server]
-- [https://ubuntu.com/server/docs/install/autoinstall-quickstart]
+1. In your terminal/powershell type `ssh pi@IPADDRESS` to log into the Pi server with the username `pi` and the password `raspberry`.
