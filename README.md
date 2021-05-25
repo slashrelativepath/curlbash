@@ -60,6 +60,25 @@ wifis:
   `sudo apt upgrade`
 
 
+### SSH Keys
+
+1. Create SSH key pair from workstation to server
+    1. Type `ssh-keygen` into your workstation terminal
+    2. Press Enter to accept the default directory `~/.ssh/id_rsa`
+    3. If the default directory already exists you will be asked to Overwrite. Press `y` then Enter
+
+    * Keep in mind this will overwrite your current key pair. Any existing devices that are key paired will no longer authenticate using the previous key.
+    4. Press Enter to accept no passphrase
+    5. Press Enter again to confirm no passphrase
+
+    * Your public key is now saved at `~/.ssh/id_rsa.pub`
+
+2. Copy your public SSH key to your server
+    1. Linux/MacOS: `ssh-copy-id -i ~/.ssh/id_rsa.pub <USERNAME>@<SERVER-IP>`
+    2. Windows: `cat ~/.ssh/id_rsa.pub | ssh <USERNAME>@<SERVER-IP> "cat >> ~/.ssh/authorized_keys"`
+    * * Be sure to replace \<USERNAME\> with your username on your server and \<SERVER-IP\> with the IP of your server
+
+3. Log in to your server to confirm `ssh <USERNAME>@<SERVER-IP>`
 ### Notes
 
 - [https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#4-boot-ubuntu-server]
