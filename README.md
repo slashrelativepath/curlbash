@@ -3,7 +3,7 @@ Curriculum for teaching computers.
 
 ## Provisioning
 
-### Buy a Raspberry Pi 400 and USB SCCard Adapter
+### Buy a Raspberry Pi 400 and USB SDCard Adapter
 
 [https://www.canakit.com/raspberry-pi-400-desktop-computer-kit.html]
 
