@@ -76,23 +76,24 @@ Persistent settings
 
 ### SSH Keys
 
-1. Create SSH key pair from workstation to server
-    1. Type `ssh-keygen` into your workstation terminal
-    2. Press Enter to accept the default directory `~/.ssh/id_rsa`
-    3. If the default directory already exists you will be asked to Overwrite. Press `y` then Enter
+1. Create SSH key pair on your workstation.
+    1. Check if you already have an ssh key pair (id_ras and id_rsa.pub) on your workstation. If you do skip to step 2 to copy the key to the server. Note: `~/` is a shortcut path to your home directory.
+    `ls -la ~/.ssh`
+    
+2. Create new ssh key pair.
+`ssh-keygen -t ed25519 -C "your_email@example.com"`
+    1. Press Enter to save the key at the default path.
+    2. Press Enter to accept no passphrase.
+    3. Press Enter again to confirm no passphrase.
 
-    * Keep in mind this will overwrite your current key pair. Any existing devices that are key paired will no longer authenticate using the previous key.
-    4. Press Enter to accept no passphrase
-    5. Press Enter again to confirm no passphrase
-
-    * Your public key is now saved at `~/.ssh/id_rsa.pub`
+    * Your public key is now saved at `~/.ssh/id_ed25519.pub` and the private key is at `~/.sssh/id_ed25519`
 
 2. Copy your public SSH key to your server
-    1. Linux/MacOS: `ssh-copy-id -i ~/.ssh/id_rsa.pub <USERNAME>@<SERVER-IP>`
-    2. Windows: `cat ~/.ssh/id_rsa.pub | ssh <USERNAME>@<SERVER-IP> "cat >> ~/.ssh/authorized_keys"`
+    1. Linux/MacOS: `ssh-copy-id -i ~/.ssh/id_ed25519.pub <USERNAME>@<SERVER-IP>`
+    2. Windows: `cat ~/.ssh/id_ed25519.pub | ssh <USERNAME>@<SERVER-IP> "cat >> ~/.ssh/authorized_keys"`
     * Be sure to replace \<USERNAME\> with your username on your server and \<SERVER-IP\> with the IP of your server
 
-3. Log in to your server to confirm `ssh <USERNAME>@<SERVER-IP>`
+3. Log in to your server to confirm that the ssh keys are working `ssh <USERNAME>@<SERVER-IP>`. You should no longer be asked for a password to connect to the pi server.
 
 ### Notes
 
