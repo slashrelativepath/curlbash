@@ -90,7 +90,7 @@ Persistent settings
 
 2. Copy your public SSH key to your server
     1. Linux/MacOS: `ssh-copy-id -i ~/.ssh/id_ed25519.pub <USERNAME>@<SERVER-IP>`
-    2. Windows: `cat ~/.ssh/id_ed25519.pub | ssh <USERNAME>@<SERVER-IP> "cat >> ~/.ssh/authorized_keys"`
+    2. Windows: `cat ~/.ssh/id_ed25519.pub | ssh <USERNAME>@<SERVER-IP> "cat > ~/.ssh/authorized_keys"`
     * Be sure to replace \<USERNAME\> with your username on your server and \<SERVER-IP\> with the IP of your server
 
 3. Log in to your server to confirm that the ssh keys are working `ssh <USERNAME>@<SERVER-IP>`. You should no longer be asked for a password to connect to the pi server.
