@@ -80,20 +80,23 @@ Persistent settings
     1. Check if you already have an ssh key pair (id_ras and id_rsa.pub) on your workstation. If you do skip to step 3 to copy the key to the server. Note: `~/` is a shortcut path to your home directory.
     `ls -la ~/.ssh`
     
-2. Create new ssh key pair.
-`ssh-keygen -t ed25519 -C "your_email@example.com"`
+2. Create new ssh key pair. `ssh-keygen -t ed25519 -C "your_email@example.com"`
     1. Press Enter to save the key at the default path.
     2. Press Enter to accept no passphrase.
     3. Press Enter again to confirm no passphrase.
 
     * Your public key is now saved at `~/.ssh/id_ed25519.pub` and the private key is at `~/.ssh/id_ed25519`
 
-3. Copy your public SSH key to your server
+3. Make the .ssh directory on your Raspberry Pi if it doesn't exist
+    1. Enter `ssh <USERNAME>@<SERVER-IP> "mkdir -p ~/.ssh"` into your terminal
+    * This will make the directory if it doesn't exist. the -p silences the error message if it already exists. 
+
+4. Copy your public SSH key to your server
     1. Linux/MacOS: `ssh-copy-id -i ~/.ssh/id_ed25519.pub <USERNAME>@<SERVER-IP>`
     2. Windows: `cat ~/.ssh/id_ed25519.pub | ssh <USERNAME>@<SERVER-IP> "cat > ~/.ssh/authorized_keys"`
     * Be sure to replace \<USERNAME\> with your username on your server and \<SERVER-IP\> with the IP of your server
 
-3. Log in to your server to confirm that the ssh keys are working `ssh <USERNAME>@<SERVER-IP>`. You should no longer be asked for a password to connect to the pi server.
+5. Log in to your server to confirm that the ssh keys are working `ssh <USERNAME>@<SERVER-IP>`. You should no longer be asked for a password to connect to the pi server.
 
 ### Notes
 
