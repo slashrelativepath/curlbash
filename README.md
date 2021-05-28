@@ -89,7 +89,8 @@ Persistent settings
 
 3. Make the .ssh directory on your Raspberry Pi if it doesn't exist
     1. Enter `ssh <USERNAME>@<SERVER-IP> "mkdir -p ~/.ssh"` into your terminal
-    * This will make the directory if it doesn't exist, the -p silences the error message if it already exists. 
+    * This will make the directory if it doesn't exist, the -p silences the error message if it already exists.
+    * Be sure to replace \<USERNAME\> with your username on your server and \<SERVER-IP\> with the IP of your server
 
 4. Copy your public SSH key to your server
     1. Linux/MacOS: `ssh-copy-id -i ~/.ssh/id_ed25519.pub <USERNAME>@<SERVER-IP>`
