@@ -86,7 +86,7 @@ Persistent settings
     2. Press Enter to accept no passphrase.
     3. Press Enter again to confirm no passphrase.
 
-    * Your public key is now saved at `~/.ssh/id_ed25519.pub` and the private key is at `~/.sssh/id_ed25519`
+    * Your public key is now saved at `~/.ssh/id_ed25519.pub` and the private key is at `~/.ssh/id_ed25519`
 
 3. Copy your public SSH key to your server
     1. Linux/MacOS: `ssh-copy-id -i ~/.ssh/id_ed25519.pub <USERNAME>@<SERVER-IP>`
