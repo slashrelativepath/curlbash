@@ -77,7 +77,7 @@ Persistent settings
 ### SSH Keys
 
 1. Create SSH key pair on your workstation.
-    1. Check if you already have an ssh key pair (id_ras and id_rsa.pub) on your workstation. If you do skip to step 2 to copy the key to the server. Note: `~/` is a shortcut path to your home directory.
+    1. Check if you already have an ssh key pair (id_ras and id_rsa.pub) on your workstation. If you do skip to step 3 to copy the key to the server. Note: `~/` is a shortcut path to your home directory.
     `ls -la ~/.ssh`
     
 2. Create new ssh key pair.
@@ -88,7 +88,7 @@ Persistent settings
 
     * Your public key is now saved at `~/.ssh/id_ed25519.pub` and the private key is at `~/.sssh/id_ed25519`
 
-2. Copy your public SSH key to your server
+3. Copy your public SSH key to your server
     1. Linux/MacOS: `ssh-copy-id -i ~/.ssh/id_ed25519.pub <USERNAME>@<SERVER-IP>`
     2. Windows: `cat ~/.ssh/id_ed25519.pub | ssh <USERNAME>@<SERVER-IP> "cat > ~/.ssh/authorized_keys"`
     * Be sure to replace \<USERNAME\> with your username on your server and \<SERVER-IP\> with the IP of your server
