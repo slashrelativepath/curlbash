@@ -76,6 +76,8 @@ Persistent settings
 
 ### SSH Keys
 
+Generating a pair of SSH keys allow you to ssh login to your server without typing or remembering your password. There is a private and public key. You keep your private key secret and safe and give out your public key to any server you would like to securely connect to. SSH keys are better than passwords because you cannot "forget" them and they are not easily figured out or comprimised.
+
 1. Create SSH key pair on your workstation.
     1. Check if you already have an ssh key pair (id_ras and id_rsa.pub) on your workstation. If you do skip to step 3 to copy the key to the server. Note: `~/` is a shortcut path to your home directory.
     `ls -la ~/.ssh`
@@ -103,3 +105,5 @@ Persistent settings
 
 - [https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#4-boot-ubuntu-server]
 - [https://ubuntu.com/server/docs/install/autoinstall-quickstart]
+- [https://ubuntu.com/tutorials/install-and-configure-nginx#1-overview]
+- [https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent]
