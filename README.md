@@ -15,7 +15,7 @@ Curriculum for teaching computers.
 
 ### Download the Raspberry Pi OS 64bit Lite Image
 
-[https://downloads.raspberrypi.org/raspios_lite_arm64/images/raspios_lite_arm64-2021-04-09/2021-03-04-raspios-buster-arm64-lite.zip]
+[https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2021-05-28/2021-05-07-raspios-buster-armhf-lite.zip]
 
 ### SDCard
 
