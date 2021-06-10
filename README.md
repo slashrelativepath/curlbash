@@ -52,7 +52,7 @@ Persistent settings
   ☑ Enable Telemetry
 ```
 2. Save the Advanced options.
-3. Operating System `CHOOSE OS -> Use custom` and pick the `2021-03-04-raspios-buster-arm64-lite.zip` you downloaded.
+3. Operating System `CHOOSE OS -> Use custom` and pick the `2021-05-07-raspios-buster-armhf-lite.zip` you downloaded.
 4. Storage `CHOOSE STORAGE` pick the SDCard you inserted in your usb. Be careful here not to pick your workstation drive.
 5. Write
 
